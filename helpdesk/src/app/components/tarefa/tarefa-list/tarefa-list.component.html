@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Controle de Tarefas</h2>
+    <button routerLink="create" class="mat-elevation-z8" mat-stroked-button color="primary">Nova Tarefa</button>
+    <br><br>
+    <div class="mat-elevation-z8">
+      <mat-card>
+        <mat-card-title>Lista de Tarefas</mat-card-title>
+        <div class="tarefa-container">
+          <mat-card *ngFor="let tarefa of tarefas" class="tarefa-card">
+            <mat-card-header>
+              <mat-card-title>{{tarefa.titulo}}</mat-card-title>
+              <mat-card-subtitle>Data de criação: {{ tarefa.dataCriacao | date:'short' }}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p><strong>Projeto:</strong> {{ tarefa.projeto.nome }}</p>
+              <p><strong>Status:</strong> {{ tarefa.status }}</p>  
+              <p><strong>Descrição:</strong> {{ tarefa.descricao }}</p>                           
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-icon-button color="warn" (click)="delete(tarefa.id)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+        
+        <mat-paginator
+          [length]="totalItems"
+          [pageSize]="pageSize"
+          [pageIndex]="currentPage"
+          [pageSizeOptions]="[5, 10, 20]"
+          (page)="onPageChange($event)">
+        </mat-paginator>
+      </mat-card>    
+    </div>
+
+    
+      
+</div>
