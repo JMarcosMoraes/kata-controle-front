@@ -1,8 +1,6 @@
 .container {
-    width: 25rem;
+    width: 90%;
     margin: auto;
-    padding: 1rem 1rem 1rem 1rem;
-    border-radius: .6rem;
 }
 
 .fullWidth {
