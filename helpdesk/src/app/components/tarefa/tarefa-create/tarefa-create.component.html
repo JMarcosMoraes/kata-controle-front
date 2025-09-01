@@ -2,14 +2,15 @@
 
         <mat-card class="form-wrapper">
           <mat-card-header>
-            <mat-card-title class="text-center">📝 Cadastro de Tarefa</mat-card-title>
-            <mat-card-subtitle class="text-center">Preencha os campos abaixo para registrar uma nova tarefa</mat-card-subtitle>
+            <mat-card-title class="text-left">Cadastro de Tarefa</mat-card-title>
+            <mat-card-subtitle class="text-left">Preencha os campos abaixo para registrar uma nova tarefa</mat-card-subtitle>
           </mat-card-header>
         
           <mat-divider></mat-divider>
         
           <mat-card-content>
             <form [formGroup]="form" (ngSubmit)="salvar()" class="form-content">
+              <br>
               <mat-form-field appearance="legacy" class="full-width">
                 <mat-label>Título</mat-label>
                 <input matInput formControlName="titulo" required />
