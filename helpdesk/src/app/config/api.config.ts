@@ -1,4 +1,4 @@
 export const API_CONFIG = {
-   //baseUrl : 'https://kata-atende-74c9f2333acf.herokuapp.com'
-   baseUrl : 'http://localhost:8080'
+   baseUrl : 'https://kata-controle-back-c3d1adbdda4e.herokuapp.com/'
+   //baseUrl : 'http://localhost:8080'
 }
